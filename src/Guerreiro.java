@@ -7,13 +7,15 @@ public class Guerreiro {
 	private int assist;
 	protected AtaqueStrategy estrategiaParaAtacar;
 	protected DefesaStrategy estrategiaParaDefender;
+	protected MagiaStrategy estrategiaLancarMagia;
 	
-	public Guerreiro(String nome, AtaqueStrategy estrategiaAtacar, DefesaStrategy estrategiaDefender) {
+	public Guerreiro(String nome, AtaqueStrategy estrategiaAtacar, DefesaStrategy estrategiaDefender, MagiaStrategy magia) {
 		this.nome = nome;
 		this.vida = 100;
 		this.kill = this.death = this.assist = 0;
 		this.estrategiaParaAtacar = estrategiaAtacar;
 		this.estrategiaParaDefender = estrategiaDefender;
+		this.estrategiaLancarMagia = magia;
 	}
 
 	public String getNome() {

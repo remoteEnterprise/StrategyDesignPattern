@@ -3,9 +3,9 @@ import java.util.Random;
 public class Main {
 
 	public static void main(String[] args) {
-		Guerreiro um = new Guerreiro("Um", new Katana(), new ArmaduraTitanio());
-		Guerreiro dois = new Guerreiro("Dois", new Machado(), new SemArmadura());
-		Guerreiro tres = new Guerreiro("Tres", new Alabarda(), new ArmaduraLoriga());
+		Guerreiro um = new Guerreiro("Um", new Katana(), new ArmaduraTitanio(), null);
+		Guerreiro dois = new Guerreiro("Dois", new Machado(), new SemArmadura(), new MagiaFireball());
+		Guerreiro tres = new Guerreiro("Tres", new Alabarda(), new ArmaduraLoriga(), null);
 		Random gerador = new Random();
 		boolean umAtaca = gerador.nextBoolean();
 		boolean doisAtaca = gerador.nextBoolean();
@@ -39,11 +39,13 @@ public class Main {
 				if(doisAtaca) {
 					if(doisAtacaUm) {
 						dois.getEstrategiaParaAtacar().atacar(um);
+						dois.estrategiaLancarMagia.lancarMagia(um);
 						if(um.getVida() <= 0) {
 							dois.setKill(dois.getKill()+1);
 							um.setDeath(um.getDeath()+1);
 						} else {
 							dois.getEstrategiaParaAtacar().atacar(tres);
+							dois.estrategiaLancarMagia.lancarMagia(um);
 							if(tres.getVida() <= 0) {
 								dois.setKill(dois.getKill()+1);
 								tres.setDeath(tres.getDeath()+1);
