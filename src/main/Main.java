@@ -1,4 +1,14 @@
+package main;
 import java.util.Random;
+
+import armors.ArmaduraLoriga;
+import armors.ArmaduraTitanio;
+import armors.SemArmadura;
+import characters.Guerreiro;
+import magics.MagiaFireball;
+import weapons.Alabarda;
+import weapons.Katana;
+import weapons.Machado;
 
 public class Main {
 
@@ -39,14 +49,14 @@ public class Main {
 				if(doisAtaca) {
 					if(doisAtacaUm) {
 						dois.getEstrategiaParaAtacar().atacar(um);
-						dois.estrategiaLancarMagia.lancarMagia(um);
+						dois.getEstrategiaLancarMagia().lancarMagia(um);
 						if(um.getVida() <= 0) {
 							dois.setKill(dois.getKill()+1);
 							um.setDeath(um.getDeath()+1);
 						}
 					} else {
 						dois.getEstrategiaParaAtacar().atacar(tres);
-						dois.estrategiaLancarMagia.lancarMagia(tres);
+						dois.getEstrategiaLancarMagia().lancarMagia(tres);
 						if(tres.getVida() <= 0) {
 							dois.setKill(dois.getKill()+1);
 							tres.setDeath(tres.getDeath()+1);

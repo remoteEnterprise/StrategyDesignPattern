@@ -1,3 +1,5 @@
+package armors;
+import strategies.DefesaStrategy;
 
 public class ArmaduraCouro implements DefesaStrategy {
 

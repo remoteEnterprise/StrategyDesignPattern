@@ -1,3 +1,7 @@
+package characters;
+import strategies.AtaqueStrategy;
+import strategies.DefesaStrategy;
+import strategies.MagiaStrategy;
 
 public class Guerreiro {
 	private String nome;
@@ -72,5 +76,13 @@ public class Guerreiro {
 
 	public void setAssist(int assist) {
 		this.assist = assist;
+	}
+
+	public MagiaStrategy getEstrategiaLancarMagia() {
+		return estrategiaLancarMagia;
+	}
+
+	public void setEstrategiaLancarMagia(MagiaStrategy estrategiaLancarMagia) {
+		this.estrategiaLancarMagia = estrategiaLancarMagia;
 	}
 }

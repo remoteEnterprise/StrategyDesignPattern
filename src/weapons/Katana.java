@@ -1,3 +1,6 @@
+package weapons;
+import characters.Guerreiro;
+import strategies.AtaqueStrategy;
 
 public class Katana implements AtaqueStrategy {
 
