@@ -45,7 +45,7 @@ public class Main {
 							um.setDeath(um.getDeath()+1);
 						} else {
 							dois.getEstrategiaParaAtacar().atacar(tres);
-							dois.estrategiaLancarMagia.lancarMagia(um);
+							dois.estrategiaLancarMagia.lancarMagia(tres);
 							if(tres.getVida() <= 0) {
 								dois.setKill(dois.getKill()+1);
 								tres.setDeath(tres.getDeath()+1);
